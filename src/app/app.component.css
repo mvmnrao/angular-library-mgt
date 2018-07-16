@@ -1,0 +1,20 @@
+h1
+{
+    color: red;/* #093145;*/
+    font-size: 22px;    
+    border: .5px solid #0C374D;
+    border-radius: 4px;
+    font: Neue Helvetica;
+    text-align: center;
+    background-image: url(https://www.rainbowpreschools.com/wp-content/uploads/2014/12/Yellow-Title-background.png);
+    padding: 5px;
+}
+
+.booksList{
+    list-style: none;
+    /* display: inline-block; */
+}
+
+.defaultStyles{
+    font: Neue Helvetica;    
+}

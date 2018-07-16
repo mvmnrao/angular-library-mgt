@@ -1,0 +1,18 @@
+.book-card{
+    text-align: center;
+    margin: 5px;
+    border: .5px solid #0C374D;
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.book-info{
+    font-family: Neue Helvetica;
+    color: #093145;
+}
+
+.book-card .thumbnail{
+    display: inline;
+    width: 200px;
+    height: 270px;
+}
