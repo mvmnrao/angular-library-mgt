@@ -1,0 +1,3 @@
+<select [(ngModel)]="selectedState" (change)="stateChanged()">
+  <option *ngFor="let state of states" value="{{state.code}}">{{state.name}}</option>
+</select>

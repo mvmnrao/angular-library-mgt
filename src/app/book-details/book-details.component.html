@@ -1,0 +1,12 @@
+<div class="book-info borderStyle">
+    <h4 [ngClass]="myClass">
+    <!-- <h4 [ngClass]="{ 'greenBold': bookInput.code == 'B001', 'redBold': bookInput.code == 'B002'}"> -->
+      {{bookInput.name}}
+    </h4>
+    <p>
+      <b [ngStyle]="{ 'color': bookInput.code == 'B001'? 'darkgreen': 'darkred'}">Author:</b>
+        {{bookInput.author}}
+      <br>
+      <b>Code:</b> {{bookInput.code}}
+    </p>
+  </div>

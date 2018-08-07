@@ -1,0 +1,15 @@
+<div class="row">
+  <!--  For, ForEach
+        For In
+        For-of Loop -->
+  <app-book *ngFor="let b of books" [book]="b" (selected)="onBookSelected($event)"></app-book>
+  <!-- <ul>
+    <li *ngFor="let b of books" class="booksList">
+      <app-book [book]="b"></app-book>      
+    </li>
+  </ul> -->
+  <!-- <app-book [book]="book1"></app-book> -->
+</div>
+<div class="row" style="padding: 10px;">
+  <app-book-details *ngIf="selectedBook" [bookInput]="selectedBook"></app-book-details>
+</div>

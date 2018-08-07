@@ -1,0 +1,13 @@
+<div class="sectionStyle">
+    <app-countries (selectedCountryChanged)="onCountryChanged($event)"></app-countries>
+    <app-states [selectedCountry]="selectedCountry" (selectedStateChanged)="onStateChanged($event)"></app-states>
+    <app-cities [selectedState]="selectedState"></app-cities>
+  </div>
+
+<div class="sectionStyle">
+  <!-- <input type="text" name="inputName" [nameOneway]=""> -->
+  <label appHighlighter>This is some text</label>
+  <input type="text" name="bookName" [(ngModel)]="nameToway" #bName />
+  <button (click)="bottonClicked(nameToway)">Click Me!</button>
+  <button (click)="btnClicked(bName)">Click Me Too!</button>
+</div>

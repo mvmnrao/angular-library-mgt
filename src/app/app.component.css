@@ -2,9 +2,10 @@ h1
 {
     color: red;/* #093145;*/
     font-size: 22px;    
-    border: .5px solid #0C374D;
-    border-radius: 4px;
-    font: Neue Helvetica;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-weight: bold;
+    /*border: .5px solid #0C374D;*/
+    border-radius: 4px;    
     text-align: center;
     background-image: url(https://www.rainbowpreschools.com/wp-content/uploads/2014/12/Yellow-Title-background.png);
     padding: 5px;
@@ -16,5 +17,30 @@ h1
 }
 
 .defaultStyles{
-    font: Neue Helvetica;    
+    font: Neue Helvetica;
+    padding-left: 15px;
+}
+
+.row a{
+    /* border: 1px solid;
+    padding: 3px;
+    border-radius: 3px; */
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    border: .5px solid #f44336;
+    padding: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.row a:hover{
+    /* border: 1px solid;
+    padding: 3px;
+    border-radius: 3px; */
+    background-color: rgb(245, 13, 13);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;   
+    text-decoration: none;  
 }

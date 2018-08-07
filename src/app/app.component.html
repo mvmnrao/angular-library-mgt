@@ -1,15 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="defaultStyles">
-  <h1>
-    Welcome {{ title }}!
-  </h1>
-  <!--  For, ForEach
-        For In
-        For-of Loop -->
-  <ul>
-    <li *ngFor="let b of books" class="booksList">
-      <app-book [book]="b"></app-book>
-    </li>
-  </ul>
-  <!-- <app-book *ngFor="let b of books; book = b"></app-book> -->
+  <div class="row" style="padding: 5px;">
+    <h1>
+      Welcome {{ title }}!
+    </h1>
+  </div>
+  <div class="row" style="padding-bottom: 10px;">
+    <a class="menuitem" routerLink='/books'>Books</a>&nbsp;
+    <a routerLink='/homeTaskOne'>Home Task One</a>&nbsp;
+  </div>
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
 </div>

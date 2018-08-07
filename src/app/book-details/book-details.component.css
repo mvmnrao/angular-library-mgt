@@ -1,0 +1,12 @@
+.greenBold{
+    color: darkgreen;
+    font-weight: bold;
+}
+.redBold{
+    color: darkred;
+    font-weight: bold;
+}
+.borderStyle{
+    /* border: .5px solid #0C374D;
+    border-radius: 5px; */
+}
