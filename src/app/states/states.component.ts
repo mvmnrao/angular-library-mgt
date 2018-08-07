@@ -22,9 +22,10 @@ export class StatesComponent implements OnInit, OnChanges {
 
   ngOnChanges() {
     this.states = this.allStates.filter(s => s.countryCode === this.selectedCountry);
+    this.selectedStateChanged.emit('');
   }
 
-  stateChanged(){
+  stateChanged() {
     this.selectedStateChanged.emit(this.selectedState);
   }
 
