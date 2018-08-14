@@ -1,8 +1,26 @@
 <div class="row">
+  <div class="col-sm-4">
+    <div class="input-group">
+      <input type="text" placeholder="Search" class="form-control" #searchText>
+      <!--use box in banana [(ngModel)] for live search as you type and 
+            input this filterText to filter applied on ngFor below-->
+      <div class="input-group-btn">
+        <button type="button" class="btn btn-primary" (click)="filterBooks(searchText.value)">
+          <i class="glyphicon glyphicon-search"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</div>
+<div class="row">
   <!--  For, ForEach
         For In
         For-of Loop -->
-  <app-book *ngFor="let b of books" [book]="b" (selected)="onBookSelected($event)"></app-book>
+  <!-- <app-book *ngFor="let b of books | myFilter : filterText: 'name'" 
+            [book]="b" (selected)="onBookSelected($event)"></app-book> -->
+  <app-book *ngFor="let b of books" 
+            [book]="b" (selected)="onBookSelected($event)"></app-book>
   <!-- <ul>
     <li *ngFor="let b of books" class="booksList">
       <app-book [book]="b"></app-book>      

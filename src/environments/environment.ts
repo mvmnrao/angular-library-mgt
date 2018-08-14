@@ -3,6 +3,21 @@
 // `ng build --env=prod` then `environment.prod.ts` will be used instead.
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
+// const key = 'AIzaSyDz1z_adQRc_kJ9dV5Y8hnhTbQAGZ23BE8';
+// export const environment = {
+//   production: false,
+//   baseUrl: 'https://library-mgt-22339.firebaseio.com/',
+//   apiKey: key,
+//   signUpUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + key,
+//   SignInUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + key
+// };
+
+const key = 'AIzaSyB0a_vM67W92EuTuvk7hz-SrnayRsBJeiU';
 export const environment = {
-  production: false
+  production: false,
+  baseUrl: 'https://bookslist-636d7.firebaseio.com/',
+  apiKey: key,
+  authDomain: "bookslist-636d7.firebaseapp.com",
+  signUpUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=' + key,
+  SignInUrl: 'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key=' + key
 };

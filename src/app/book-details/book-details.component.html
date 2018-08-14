@@ -3,9 +3,9 @@
     <!-- <h4 [ngClass]="{ 'greenBold': bookInput.code == 'B001', 'redBold': bookInput.code == 'B002'}"> -->
       {{bookInput.name}}
     </h4>
-    <p>
+    <p appHoverElement>
       <b [ngStyle]="{ 'color': bookInput.code == 'B001'? 'darkgreen': 'darkred'}">Author:</b>
-        {{bookInput.author}}
+        {{bookInput.author | shortenPipe: 10}}
       <br>
       <b>Code:</b> {{bookInput.code}}
     </p>
