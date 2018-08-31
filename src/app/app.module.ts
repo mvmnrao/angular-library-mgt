@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, FormControl} from '@angular/forms';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule, Route, Routes } from '@angular/router';
 import { HttpClientModule} from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
@@ -17,6 +17,36 @@ import { HoverElementDirective } from './directives/hoverelement/hover-element.d
 import { BooksService } from './books/books.service';
 import { ShortenPipePipe } from './pipes/shorten-pipe.pipe';
 import { MyFilterPipe } from './pipes/my-filter.pipe';
+import { LoginPageComponent } from './login-page/login-page.component';
+
+const routes: Routes = [
+  {
+    path: "",
+    redirectTo: "login",
+    pathMatch: "full"
+  },
+  {
+    path: "books",
+    component: BooksComponent
+  },
+  {
+    path: "login",
+    component: LoginPageComponent
+  },
+  // {
+  //   path: "myModule",
+  //   loadChildren: "./myModule/mymodule.module#MyModuleModule"
+  // },
+  {
+    path: "homeTaskOne",
+    component: HomeTaskOneComponent
+  },
+  {
+    path: "**",
+    redirectTo: 'login',
+    pathMatch: 'full'
+  }
+];
 
 @NgModule({
   declarations: [
@@ -32,27 +62,14 @@ import { MyFilterPipe } from './pipes/my-filter.pipe';
     FilterListPipe,
     HoverElementDirective,
     ShortenPipePipe,
-    MyFilterPipe
+    MyFilterPipe,
+    LoginPageComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    RouterModule.forRoot([
-      {
-        path: "books",
-        component: BooksComponent
-      },
-      {
-        path: "homeTaskOne",
-        component: HomeTaskOneComponent
-      },
-      {
-        path: '',
-        redirectTo: '/books',
-        pathMatch: 'full'
-      }
-    ])
+    RouterModule.forRoot(routes)
   ],
   providers: [
     BooksService,

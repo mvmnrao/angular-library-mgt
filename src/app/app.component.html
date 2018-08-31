@@ -6,8 +6,11 @@
     </h1>
   </div>
   <div class="row" style="padding-bottom: 10px;">
-    <a class="menuitem" routerLink='/books'>Books</a>&nbsp;
-    <a routerLink='/homeTaskOne'>Home Task One</a>&nbsp;
+    <!-- <a routerLink='/books'>Books</a>&nbsp;
+    <a routerLink='/homeTaskOne'>Home Task One</a>&nbsp; -->
+    <a [routerLink]="['/books']">Books</a>&nbsp;
+    <a [routerLink]="['/homeTaskOne']">Home Task One</a>&nbsp;
+    <a [routerLink]="['/login']" class="pull-right" style="margin-right: 20px;">Login</a>
   </div>
   <div class="row">
     <router-outlet></router-outlet>
